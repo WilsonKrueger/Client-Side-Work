@@ -1,0 +1,138 @@
+/* The styles for the elements */
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 85%;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+    width: 100%;
+}
+h1 {     
+    font-size: 200%;
+    color: greenyellow;
+    margin-bottom: .5em;    
+    text-align: center;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+label {
+   /*? float: left;*/
+    width: 50px;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"] {  /* An attribute selector */
+    width: 30em;
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;
+}
+span {
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;    
+}
+br {
+    clear: both;
+}
+
+/* The styles for the classes */
+.pad_top {
+    padding-top: 0.5em;
+}
+.margin_left {
+    margin-left: 0.5em;
+}
+
+.centeredTop {
+  position: fixed;
+  top: 24%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -24%);
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+/*Retrieved from this link: https://www.w3schools.com/howto/howto_css_block_buttons.asp*/ 
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #000000;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*id selectors*/
+#first_body {
+    background-image: url("https://www.cdc.gov/healthyweight/images/assessing/bmi-adult-fb-600x315.jpg?_=07167");
+}
+#second_body {
+    background-image: url("https://www.slazengerheritage.com/wp-content/uploads/2020/05/win-four-grand-slam-tournaments.jpg");
+}
+#third_body {
+     background-image: url("https://tennismash.com/wp-content/uploads/2017/09/Fedal-08.jpg");
+}
+#fourth_body {
+     background-image: url("https://wallpaperaccess.com/full/2936278.jpg");
+}
+
+#div_form
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 22%;
+    border: solid blue 3px;
+    padding: 10px;
+    background-color: lightsteelblue;
+}
+#div_table
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 52%;
+    padding: 10px;
+    background-color: lightsteelblue;
+}
+#input_year {
+    width: 60px;
+}
+
+/* The styles for the tables */
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: .5em;
+}
+.right {
+    text-align: right;
+}
+
+
+/* The styles for displaying forms and buttons */
+.inline {
+    display: inline;
+}
+.confirm_button {
+    width: 5em;
+}
+#codeBox, #priceBox {
+    width: 6em;
+}

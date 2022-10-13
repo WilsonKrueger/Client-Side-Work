@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body id="first_body">
+        <div class = "centered">
+            <button type="button" class="block" onclick="myFunction()">Calculate BMI</button>
+        </div>
+        <script>
+        function myFunction() {
+            // Metric: BMI = Weight in kg / (Height in cm X Height) OR 
+            // English: BMI = Weight in lb / (Height in inches X Height) X 703
+            let weight, height, weightNum, heightNum;
+            
+            //Ask the user for their weight in pounds
+            do
+            {
+                weight = prompt("Please enter your weight in pounds(lbs) as a valid number:", 0);
+            
+                weightNum = parseInt(weight);
+            }
+            while ((weightNum <= 0 || isNaN(weightNum)) && weight != null);
+                         
+            //Only ask for the height if the user entered a weight
+            if(weight != null)
+            {
+                //Prompt the user for their height in inches
+                do
+                {
+                    height = prompt("Please enter your height in inches as a valid number:", 0);
+                    
+                    heightNum = parseInt(height);
+                }
+                while ((heightNum <= 0 || isNaN(heightNum)) && height != null);
+            }
+            
+            if(weight != null && height != null)
+            {
+                let bmi = weightNum / (heightNum * heightNum) * 703;
+
+                let bmiResult = "BMI: " + bmi;
+
+                if(bmi > 0 && bmi < 18.5)
+                {
+                    bmiResult += "\nUnderweight = <18.5";
+                }
+                else if(bmi < 25)
+                {
+                    bmiResult += "\nNormal weight = 18.5-24.9";
+                }
+                else if(bmi < 30)
+                {
+                    bmiResult += "\nOverweight = 25-29.9";
+                }
+                else if(bmi >= 30)
+                {
+                    bmiResult += "\nObesity = BMI of 30 or greater";
+                }
+                else
+                {
+                    bmiResult = "Invalid BMI...Try again!";
+                }
+
+                //Alert the user of their result
+                alert(bmiResult);
+            }
+            
+        }
+        
+        </script>   
+    </body>
+</html>
