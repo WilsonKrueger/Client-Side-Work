@@ -19,7 +19,7 @@ and open the template in the editor.
         function myFunction() {
             // Metric: BMI = Weight in kg / (Height in cm X Height) OR 
             // English: BMI = Weight in lb / (Height in inches X Height) X 703
-            let weight, height, weightNum, heightNum;
+            let weight, height, weightNum, heightNum, bmi, bmiResult;
             
             //Ask the user for their weight in pounds
             do
@@ -43,11 +43,12 @@ and open the template in the editor.
                 while ((heightNum <= 0 || isNaN(heightNum)) && height != null);
             }
             
+            //Calculate the result if both the height and weight are entered
             if(weight != null && height != null)
             {
-                let bmi = weightNum / (heightNum * heightNum) * 703;
+                bmi = weightNum / (heightNum * heightNum) * 703;
 
-                let bmiResult = "BMI: " + bmi;
+                bmiResult = "BMI: " + bmi;
 
                 if(bmi > 0 && bmi < 18.5)
                 {

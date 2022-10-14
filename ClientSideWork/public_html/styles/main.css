@@ -89,11 +89,11 @@ br {
      background-image: url("https://wallpaperaccess.com/full/2936278.jpg");
 }
 
-#div_form
+#div_main
 {
     margin: 0 auto;
     text-align: center;
-    width: 15%;
+    width: 33%;
     border: solid blue 3px;
     padding: 10px;
     background-color: lightsteelblue;
