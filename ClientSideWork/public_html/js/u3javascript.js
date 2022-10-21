@@ -9,8 +9,8 @@ $(document).ready(function(){
         $("#para").attr('style',bc);
     });
     $( "#fontSizeSelector" ).change(function() {
-//        let fs = 'font-size:' + $(this).children("option:selected").val() + 'px';
         let fs = $(this).children("option:selected").val();
+        fs += "px";
         $("#para").css("fontSize", fs);
     });
  });
