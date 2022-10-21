@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>User-Controlled CSS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/main.css" rel="stylesheet" type="text/css"/>
+        <!--<script src="jquery-3.6.1.min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        
+    </head>
+    <body>
+        <div class="centeredTop" id="div_alternate">
+            <h1 class="colorBlack">User-Controlled CSS</h1>
+            <form id="mainForm"> 
+                <label for="color">Choose a color:</label>
+                <select name="color" id="color">
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                </select>
+                <label for="fontSizeSelector">Choose a font size (in pixels):</label>
+                <select name="fontSizeSelector" id="fontSizeSelector">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                </select>
+            </form>
+            <h2>
+                <u>Paragraph where the changes take effect:</u>                
+            </h2>
+            <p id="para">
+                Create a web page with a form and 3 drop-down boxes for the 
+                following CSS properties: color, font-size, and background color. 
+                You may choose what values to have in the drop-downs. 
+                When a user selects something in the list, it should change the 
+                appropriate CSS property of a paragraph on the page. 
+                (You may choose how big the paragraph is and what text it contains.)
+            </p>
+        </div>
+        
+        <script src="../js/u3javascript.js"></script>
+    </body>
+</html>
