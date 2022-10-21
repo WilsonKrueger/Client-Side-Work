@@ -4,13 +4,31 @@
  */
 
 $(document).ready(function(){
-    $( "#color" ).change(function() {
-        let bc = 'background-color:' + $(this).children("option:selected").val();
-        $("#para").attr('style',bc);
+    $("#textColor").change(function() {
+        updateColor();
     });
-    $( "#fontSizeSelector" ).change(function() {
-        let fs = $(this).children("option:selected").val();
+    
+    $("#fontSizeSelector").change(function() {
+        updateFontSize();
+    });
+    
+    $("#backgroundColor").change(function() {
+        updateBackgroundColor();
+    });
+    
+    function updateColor() {
+        let col = $("#textColor").children("option:selected").val();
+        $("#para").css("color", col);
+    }
+    
+    function updateFontSize() {
+        let fs = $("#fontSizeSelector").children("option:selected").val();
         fs += "px";
         $("#para").css("fontSize", fs);
-    });
+    }
+    
+    function updateBackgroundColor() {
+        let bc = $("#backgroundColor").children("option:selected").val();
+        $("#para").css("background-color", bc);
+    }
  });
