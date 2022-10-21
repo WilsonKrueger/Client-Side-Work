@@ -35,7 +35,7 @@ br {
 
 /* The styles for the classes */
 .pad_top {
-    padding-top: 5px;
+    padding-top: 20px;
 }
 .margin_left {
     margin-left: 0.5em;
@@ -43,10 +43,9 @@ br {
 
 .centeredTop {
   position: fixed;
-  top: 24%;
   left: 50%;
   /* bring your own prefixes */
-  transform: translate(-50%, -24%);
+  transform: translate(-50%);
 }
 
 .centered {
@@ -55,6 +54,10 @@ br {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+
+.colorBlack {
+    color: black;
 }
 
 /*Retrieved from this link: https://www.w3schools.com/howto/howto_css_block_buttons.asp*/ 
@@ -133,6 +136,6 @@ th, td {
 .confirm_button {
     width: 5em;
 }
-#codeBox, #priceBox {
+.inputBox {
     width: 6em;
 }

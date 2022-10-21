@@ -10,28 +10,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../styles/main.css" rel="stylesheet" type="text/css"/>
         <!--<script src="jquery-3.6.1.min.js"></script>-->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         
     </head>
     <body>
-        <!--<div>TODO write content</div>-->
-        <form> 
-            <label for="itemInput">Enter Item:</label> 
-            <input id="itemInput" type="text"/><br/>
-            <input id="addButton" type="button" value="Add"/>
-            <input id="removeButton" type="button" value="Remove Last" /> 
-        </form>
-        <table>
-            <tr>
-              <td>Test 1</td>
-            </tr>
-            <tr>
-              <td>Test 2</td>
-            </tr>
-        </table>
-        <ul id="list">
-            <li>Testing</li>
-        </ul>
+        <div class="centeredTop">
+            <h1 class="colorBlack">Data Entry</h1>
+            <form id="mainForm"> 
+                <label for="itemInput">Enter Item:</label> 
+                <input class="inputBox" id="itemInput" type="text"/><br/>
+                <input id="addButton" type="button" value="Add"/>
+                <input id="removeButton" type="button" value="Remove Last" /> 
+            </form>
+            <h2>
+                <u>List of Items</u>                
+            </h2>
+            <ul id="list"></ul>
+        </div>
         
         <script src="../js/u2javascript.js"></script>
     </body>
