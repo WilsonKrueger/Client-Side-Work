@@ -120,6 +120,11 @@ br {
     width: 60px;
 }
 
+/*#accordion {
+    width: 90%;
+    
+}*/
+
 /* The styles for the tables */
 table {
     border: 1px solid black;
