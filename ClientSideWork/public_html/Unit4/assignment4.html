@@ -17,23 +17,63 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     </head>
     <body id="div_alternate">
         
-        <!-- The Modal -->
+<!--         The Modal 
         <div id="myModal" class="modal">
+            
+             Trigger/Open The Modal 
+            <button id="myBtn">Open Modal</button>
 
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-          </div>
+             Modal content 
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
 
-        </div>
-        
+        </div>-->
+        <form id="mainForm">
+            <label for="titleInput">Title:</label> 
+            <input class="inputBox" id="titleInput" type="text"/><br>
+            
+            <label for="contentInput">Content:</label> 
+            <textarea id="contentInput" rows="4" cols="50"></textarea><br>
+            
+            <input type="button" value="Add" id="addButton" />
+            <input type="submit" value="Done">
+        </form>
         
         
         
         <div id="accordion">
-            <div class="panel">
+<div class="group">
+  <h3>Sortable content panel 1</h3>
+    <div>
+    <p>
+    This is section 1. Place your content here in paragraphs or use div elements etc.
+    </p>
+    </div>
+</div>    
+<div class="group">
+  <h3>Sortable content panel 2</h3>
+    <div>
+    <p>
+    This is section 2. You can also include images
+    </p>
+    </div>
+</div>  
+<div class="group">
+  <h3>Sortable content panel 3</h3>
+    <div>
+    <p>
+    This is section 3. Content can include listing as well.
+    </p>
+    </div>
+</div>
+</div>
+        
+<!--        <div id="accordion">
+            
                 <h3>Section 1</h3>
+            <div class="panel">
                 <p>
                 Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                 ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
@@ -41,8 +81,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
                 </p>
             </div>
-            <div class="panel">
-                <h3>Section 2</h3>
+            
+                <h3>Section 2</h3><div class="panel">
                 <p>
                 Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
                 purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
@@ -50,8 +90,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 suscipit faucibus urna.
                 </p>
             </div>
-            <div class="panel">
+            
                 <h3>Section 3</h3>
+            <div class="panel">
                 <p>
                 Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
                 Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
@@ -59,16 +100,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
                 </p>
             </div>
-            <div class="panel">
-                <h3>Section 4</h3>
-                <p>
-                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                mauris vel est.
-                </p>
-            </div>
-          </div>
+          
+        </div>-->
         
         <script src="../js/u4javascript.js"></script>
     </body>
