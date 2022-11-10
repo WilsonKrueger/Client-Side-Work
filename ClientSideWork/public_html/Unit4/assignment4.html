@@ -17,33 +17,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     </head>
     <body id="div_alternate">
         
-<!--         The Modal 
+         <!--The Modal--> 
         <div id="myModal" class="modal">
-            
-             Trigger/Open The Modal 
-            <button id="myBtn">Open Modal</button>
-
-             Modal content 
+             <!--Modal content--> 
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+                <!--<span class="close">&times;</span>-->
+                <form id="mainForm">
+                    <label for="titleInput">Title:</label> 
+                    <input class="inputBox" id="titleInput" type="text"/><br>
+
+                    <label for="contentInput">Content:</label> 
+                    <textarea id="contentInput" rows="4" cols="50"></textarea><br>
+
+                    <input type="button" value="Add" id="addButton" />
+                    <input type="submit" value="Done">
+                </form>
             </div>
 
-        </div>-->
-        <form id="mainForm">
-            <label for="titleInput">Title:</label> 
-            <input class="inputBox" id="titleInput" type="text"/><br>
-            
-            <label for="contentInput">Content:</label> 
-            <textarea id="contentInput" rows="4" cols="50"></textarea><br>
-            
-            <input type="button" value="Add" id="addButton" />
-            <input type="submit" value="Done">
-        </form>
+        </div>
+         
+         
+         
         
         
         
-        <div id="accordion">
+        
+<!--        <div id="accordion">
 <div class="group">
   <h3>Sortable content panel 1</h3>
     <div>
@@ -68,12 +67,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     </p>
     </div>
 </div>
-</div>
+</div>-->
         
-<!--        <div id="accordion">
-            
-                <h3>Section 1</h3>
+        <div id="accordion">
             <div class="panel">
+                <h3>Section 1</h3>
                 <p>
                 Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                 ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
@@ -81,8 +79,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
                 </p>
             </div>
-            
-                <h3>Section 2</h3><div class="panel">
+            <div class="panel">
+                <h3>Section 2</h3>
                 <p>
                 Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
                 purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
@@ -90,9 +88,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 suscipit faucibus urna.
                 </p>
             </div>
-            
-                <h3>Section 3</h3>
             <div class="panel">
+                <h3>Section 3</h3>
                 <p>
                 Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
                 Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
@@ -101,7 +98,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 </p>
             </div>
           
-        </div>-->
+        </div>
         
         <script src="../js/u4javascript.js"></script>
     </body>
