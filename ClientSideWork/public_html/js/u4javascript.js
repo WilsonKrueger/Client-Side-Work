@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
     $('#accordion').accordion({
         collapsible: true,
         active: false,
@@ -6,16 +7,6 @@ $(document).ready(function(){
         header: 'h3'
     }).sortable({
         items: '.panel'
-//        axis: "y",
-//        handle: "h3",
-//        stop: function( event, ui ) {
-//          // IE doesn't register the blur when sorting
-//          // so trigger focusout handlers to remove .ui-state-focus
-//          ui.item.children( "h3" ).triggerHandler( "focusout" );
-// 
-//          // Refresh accordion to handle new order
-//          $( this ).accordion( "refresh" );
-//        }
     });
     
     $("#addButton").click(function()
@@ -24,29 +15,32 @@ $(document).ready(function(){
         let content = $('#contentInput').val();
         
         let appendText = '<div class = \'panel\'><h3>' + title + '</h3><p>' + content + '</p></div>';
-//        let appendText = '<div class = \'group\'><h3>' + title + '</h3><div><p>' + content + '</p></div></div>';
         
         //Add the appended text to the accordion and refresh
         $('#accordion').append(appendText);
         $('#accordion').accordion( "refresh" );
         
-        //Clear the form
-        $('#mainForm')[0].reset();
+        //Clear the contents
+        $('#titleInput').val("");
+        $('#contentInput').val("");
     });
     
     // When the user clicks the button, open the modal 
-     $("#openModalBtn").click(function() 
+     $("#openModalButton").click(function() 
      {
         $('#myModal').show();
      });
-    
-    document.getElementById("mainForm").onsubmit = function() {
-        // Get the modal
-//        var modal = document.getElementById("myModal");
-        
+     
+     // When the user clicks the button, close the modal and run the effects
+     $("#doneButton").click(function() 
+     {
         $('#myModal').hide();
-    };
-
+        
+        // Run the effects
+        $( "#accordion" ).effect("bounce", {times: 5}, "slow");
+        $( "#accordion" ).effect( "highlight", {color:"green"}, 1000);
+     });
+     
 });
 
 
