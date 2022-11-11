@@ -34,11 +34,19 @@ $(document).ready(function(){
         $('#mainForm')[0].reset();
     });
     
-    // Get the modal
-    var modal = document.getElementById("myModal");
+    // When the user clicks the button, open the modal 
+     $("#openModalBtn").click(function() 
+     {
+        $('#myModal').show();
+     });
     
-    modal.style.display = "block";
-    
+    document.getElementById("mainForm").onsubmit = function() {
+        // Get the modal
+//        var modal = document.getElementById("myModal");
+        
+        $('#myModal').hide();
+    };
+
 });
 
 
