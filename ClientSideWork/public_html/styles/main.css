@@ -78,6 +78,22 @@ br {
   color: black;
 }
 
+/*Retrieved from https://jqueryui.com/progressbar/#label*/
+.ui-progressbar {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    justify-content: center;
+  }
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+
+  
 /*id selectors*/
 #first_body {
     background-image: url("https://www.cdc.gov/healthyweight/images/assessing/bmi-adult-fb-600x315.jpg?_=07167");

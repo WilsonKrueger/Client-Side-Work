@@ -13,13 +13,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>        
         <!--<script src="../jquery/jquery-3.6.1.min.js"></script>-->
         <!--<script src="../jquery-ui.js"></script>-->
-        <link href="../styles/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="../styles/jquery-ui.css" rel="stylesheet" type="text/css"/>-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     </head>
     <body id="div_alternate">
-        <div id="question1Div">
+        <div id="questionDiv">
+            <input type="hidden" value="2" id='nextQ'>
+            
+            <h1>Question 1</h1>
+            <h3>When was jQuery version 3.6.1 released?</h3>
+            <!--August 26, 2022-->
+            
             <p>Date: <input type="text" id="datepicker"></p>
-        </div>
+            
+            <input type="button" value="Next Question" id="nextButton" />
+        
 
+        
+        </div>
+        
         <script src="../js/finaljavascript.js"></script>
     </body>
 </html>
