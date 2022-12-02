@@ -80,10 +80,11 @@ br {
 
 /*Retrieved from https://jqueryui.com/progressbar/#label*/
 .ui-progressbar {
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 50%;
-    justify-content: center;
   }
   .progress-label {
     position: absolute;
