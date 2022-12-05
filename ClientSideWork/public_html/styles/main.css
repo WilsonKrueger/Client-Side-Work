@@ -93,6 +93,13 @@ br {
     font-weight: bold;
     text-shadow: 1px 1px 0 #fff;
   }
+  
+  .progress_header {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 
   
 /*id selectors*/
