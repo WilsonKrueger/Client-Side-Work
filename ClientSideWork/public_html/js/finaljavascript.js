@@ -1,50 +1,45 @@
+// Declare variables
+var progressbarDiv = $( "#progressbar" ).progressbar();
+var progressbarLabel = $( ".progress-label" );
+
+var numberCorrect = 0;
+var userAnswer1;
+var correctAnswer1;
+var userAnswer2;
+var correctAnswer2;
+var userAnswer3;
+var correctAnswer3;
+var userAnswer4;
+var correctAnswer4;
+var userAnswer5;
+var correctAnswer5;
+
 $(document).ready(function()
 {    
-    var progressbarDiv = $( "#progressbar" ).progressbar();
-    var progressbarLabel = $( ".progress-label" );
-    $( "#datepicker" ).datepicker();
+    var datepicker = $( "#datepicker" ).datepicker();
     
-    var numberCorrect = 1;
-    var userAnswer;
-    var correctAnswer;
-    var q1Correct = true;
-    var q2Correct = false;
-    var q3Correct = false;
-    var q4Correct = false;
-    var q5Correct = false;
-
     $("#navButton").click(function()
     {
         var navIndex = parseInt($( "#navIndex" ).val());
         let questionHTML;
         
-        //Validate questions 1-5
-        if(navIndex === 2)
-        {
-            validateQ1();
-        }
-//        else if(navIndex === 3)
-//        {
-//            validateQ2();
-//        }
-//        else if(navIndex === 4)
-//        {
-//            validateQ3();
-//        }
-//        else if(navIndex === 5)
-//        {
-//            validateQ4();
-//        }
+        // Value to update the progress bar
+        var progress = 20 * (navIndex - 1);
         
-        if(navIndex === 6)
-        {
-//            validateQ5();
-            calculateResults();
-        }
-        else if(navIndex === 0)
+        // Determine next load 
+        if(navIndex === 0)
         {
             questionHTML = "finalMain.html #questionMainDiv";
+            
+            // Reset progress to 0 if going to main page
+            progress = 0;
         }
+        
+        else if(navIndex === 6)
+        {
+            questionHTML = "results.html #resultsDiv";
+        }
+        
         else 
         {
             questionHTML = "question" + navIndex + ".html #questionDiv";
@@ -54,15 +49,6 @@ $(document).ready(function()
         $("#questionMainDiv").load(questionHTML ,function(){
             $.getScript("../js/finaljavascript.js"); 
         });
-        
-        // Value to update the progress bar
-        var progress = 20 * (navIndex - 1);
-        
-        // Reset progress to 0 if going to main page
-        if(navIndex === 0)
-        {
-            progress = 0;
-        }
 
         // Update the progress bar and label 
         progressbarDiv.progressbar({
@@ -73,26 +59,145 @@ $(document).ready(function()
         
     });
     
-    function validateQ1() 
+    // Validate Question 1
+    $("#validateQ1Button").click(function()
     {
-        userAnswer = $("#datepicker").val();
-        correctAnswer = "08/26/2022";
+        userAnswer1 = datepicker.val();
+        correctAnswer1 = "08/26/2022";
         
-        if(userAnswer === correctAnswer)
+        // Disable Submit Answer button
+        $('#validateQ1Button').prop('disabled', true);
+        
+        //Enable Next Question button
+        $('#navButton').prop('disabled', false);
+    });
+    
+    // Validate Question 2
+    $("#validateQ2Button").click(function()
+    {
+        userAnswer2 = $('input[name="TorF"]:checked').val();
+        correctAnswer2 = "True";
+        
+        // Disable Submit Answer button
+        $('#validateQ2Button').prop('disabled', true);
+        
+        //Enable Next Question button
+        $('#navButton').prop('disabled', false);
+    });
+    
+    // Validate Question 3
+    $("#validateQ3Button").click(function()
+    {
+        userAnswer3 = $('input[name="JSDev"]:checked').val();
+        correctAnswer3 = "10 Days";
+        
+        // Disable Submit Answer button
+        $('#validateQ3Button').prop('disabled', true);
+        
+        //Enable Next Question button
+        $('#navButton').prop('disabled', false);
+    });
+    
+    // Validate Question 4
+    $("#validateQ4Button").click(function()
+    {
+//        userAnswer4 = datepicker.val();
+//        correctAnswer4 = "08/26/2022";
+        
+        // Disable Submit Answer button
+        $('#validateQ4Button').prop('disabled', true);
+        
+        //Enable Next Question button
+        $('#navButton').prop('disabled', false);
+    });
+    
+    // Validate Question 5
+    $("#validateQ5Button").click(function()
+    {
+//        userAnswer5 = datepicker.val();
+//        correctAnswer5 = "08/26/2022";
+        
+        // Disable Submit Answer button
+        $('#validateQ5Button').prop('disabled', true);
+        
+        //Enable Next Question button
+        $('#navButton').prop('disabled', false);
+    });
+    
+    $("#calcResultsButton").click(function()
+    {
+        let q1Para = $("#q1Results p");
+        let q2Para = $("#q2Results p");
+        let q3Para = $("#q3Results p");
+//        let q4Para = $("#q4Results p");
+//        let q5Para = $("#q5Results p");
+        
+        // Check Question 1
+        if(userAnswer1 === correctAnswer1)
         {
             numberCorrect++;
-            q1Correct = true;
+            q1Para.html("Question 1: Correct! Your answer " + userAnswer1);
+            q1Para.css("color", "green");
         }
-    }
-    
-    function calculateResults() 
-    {
-        $("#score").text("Score: " + numberCorrect + "/5");
-        if(q1Correct)
+        else
         {
-            $("#q1Results").text("You got question 1 correct!");
+             q1Para.html("Question 1: Incorrect... The correct answer was " + correctAnswer1);
         }
-    }
+        
+        // Check Question 2
+        if(userAnswer2 === correctAnswer2)
+        {
+            numberCorrect++;
+            q2Para.html("Question 2: Correct! Your answer " + userAnswer2);
+            q2Para.css("color", "green");
+        }
+        else
+        {
+             q2Para.html("Question 2: Incorrect... The correct answer was " + correctAnswer2);
+        }
+        
+        // Check Question 3
+        if(userAnswer3 === correctAnswer3)
+        {
+            numberCorrect++;
+            q3Para.html("Question 3: Correct! Your answer " + userAnswer3);
+            q3Para.css("color", "green");
+        }
+        else
+        {
+             q3Para.html("Question 3: Incorrect... The correct answer was " + correctAnswer3);
+        }
+        
+//        // Check Question 4
+//        if(userAnswer4 === correctAnswer4)
+//        {
+//            numberCorrect++;
+//            q4Para.html("Question 4: Correct!");
+//            q4Para.css("color", "green");
+//        }
+//        else
+//        {
+//             q4Para.html("Question 4: Incorrect... The correct answer was " + correctAnswer4);
+//        }
+//        
+//        // Check Question 5
+//        if(userAnswer5 === correctAnswer5)
+//        {
+//            numberCorrect++;
+//            q5Para.html("Question 5: Correct!");
+//            q5Para.css("color", "green");
+//        }
+//        else
+//        {
+//             q5Para.html("Question 5: Incorrect... The correct answer was " + correctAnswer5);
+//        }
+        
+        let scoreText = "Score: " + numberCorrect + "/5";
+        $("#score h3").html(scoreText);
+        
+        //Disable Calculate Results button
+        $('#calcResultsButton').prop('disabled', true);
+    });
     
     //Method to load the results
 });

@@ -100,6 +100,11 @@ br {
     left: 50%;
     transform: translate(-50%, 0);
   }
+  
+  .allign_left {
+      display: inline-block; 
+      text-align: left;
+  }
 
   
 /*id selectors*/
@@ -144,10 +149,9 @@ br {
     width: 60px;
 }
 
-/*#accordion {
-    width: 90%;
-    
-}*/
+#correctAnswersDiv {
+    color: red;
+}
 
 /* The styles for the tables */
 table {
