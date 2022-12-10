@@ -16,7 +16,8 @@ var correctAnswer5;
 
 $(document).ready(function()
 {    
-    var datepicker = $( "#datepicker" ).datepicker();
+    var datepicker = $("#datepicker").datepicker();
+    var slider = $("#slider").slider();
     
     $("#navButton").click(function()
     {
@@ -101,8 +102,8 @@ $(document).ready(function()
     // Validate Question 4
     $("#validateQ4Button").click(function()
     {
-//        userAnswer4 = datepicker.val();
-//        correctAnswer4 = "08/26/2022";
+        userAnswer4 = $('input[name="PercentUsed"]:checked').val();
+        correctAnswer4 = "90%";
         
         // Disable Submit Answer button
         $('#validateQ4Button').prop('disabled', true);
@@ -114,8 +115,8 @@ $(document).ready(function()
     // Validate Question 5
     $("#validateQ5Button").click(function()
     {
-//        userAnswer5 = datepicker.val();
-//        correctAnswer5 = "08/26/2022";
+        userAnswer5 = slider.val();
+        correctAnswer5 = 75;
         
         // Disable Submit Answer button
         $('#validateQ5Button').prop('disabled', true);
@@ -124,13 +125,26 @@ $(document).ready(function()
         $('#navButton').prop('disabled', false);
     });
     
+    $( function() 
+    {
+        var handle = $( "#custom-handle" );
+        $( "#slider" ).slider({
+            create: function() {
+                handle.text( $( this ).slider( "value" ) );
+            },
+            slide: function( event, ui ) {
+                handle.text( ui.value );
+            }     
+        });
+    });
+    
     $("#calcResultsButton").click(function()
     {
         let q1Para = $("#q1Results p");
         let q2Para = $("#q2Results p");
         let q3Para = $("#q3Results p");
-//        let q4Para = $("#q4Results p");
-//        let q5Para = $("#q5Results p");
+        let q4Para = $("#q4Results p");
+        let q5Para = $("#q5Results p");
         
         // Check Question 1
         if(userAnswer1 === correctAnswer1)
@@ -168,29 +182,29 @@ $(document).ready(function()
              q3Para.html("Question 3: Incorrect... The correct answer was " + correctAnswer3);
         }
         
-//        // Check Question 4
-//        if(userAnswer4 === correctAnswer4)
-//        {
-//            numberCorrect++;
-//            q4Para.html("Question 4: Correct!");
-//            q4Para.css("color", "green");
-//        }
-//        else
-//        {
-//             q4Para.html("Question 4: Incorrect... The correct answer was " + correctAnswer4);
-//        }
-//        
-//        // Check Question 5
-//        if(userAnswer5 === correctAnswer5)
-//        {
-//            numberCorrect++;
-//            q5Para.html("Question 5: Correct!");
-//            q5Para.css("color", "green");
-//        }
-//        else
-//        {
-//             q5Para.html("Question 5: Incorrect... The correct answer was " + correctAnswer5);
-//        }
+        // Check Question 4
+        if(userAnswer4 === correctAnswer4)
+        {
+            numberCorrect++;
+            q4Para.html("Question 4: Correct!");
+            q4Para.css("color", "green");
+        }
+        else
+        {
+             q4Para.html("Question 4: Incorrect... The correct answer was " + correctAnswer4);
+        }
+        
+        // Check Question 5
+        if(userAnswer5 >= correctAnswer5)
+        {
+            numberCorrect++;
+            q5Para.html("Question 5: Correct!");
+            q5Para.css("color", "green");
+        }
+        else
+        {
+             q5Para.html("Question 5: Incorrect... The correct answer was greater than or equal to " + correctAnswer5 + " ;)");
+        }
         
         let scoreText = "Score: " + numberCorrect + "/5";
         $("#score h3").html(scoreText);

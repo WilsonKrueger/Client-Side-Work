@@ -153,6 +153,16 @@ br {
     color: red;
 }
 
+/* Retrieved from https://jqueryui.com/slider/#custom-handle */
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+
 /* The styles for the tables */
 table {
     border: 1px solid black;
