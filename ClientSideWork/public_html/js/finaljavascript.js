@@ -17,7 +17,6 @@ var correctAnswer5;
 $(document).ready(function()
 {    
     var datepicker = $("#datepicker").datepicker();
-    var slider = $("#slider").slider();
     
     $("#navButton").click(function()
     {
@@ -56,8 +55,6 @@ $(document).ready(function()
             value: parseInt(progress)
         });
         progressbarLabel.text(progress + "%");
-        
-        
     });
     
     // Validate Question 1
@@ -115,7 +112,7 @@ $(document).ready(function()
     // Validate Question 5
     $("#validateQ5Button").click(function()
     {
-        userAnswer5 = slider.val();
+        userAnswer5 = $('#slider').slider("value");
         correctAnswer5 = 75;
         
         // Disable Submit Answer button
@@ -125,6 +122,7 @@ $(document).ready(function()
         $('#navButton').prop('disabled', false);
     });
     
+    // Slider functionality
     $( function() 
     {
         var handle = $( "#custom-handle" );
@@ -138,6 +136,7 @@ $(document).ready(function()
         });
     });
     
+    // Calculate the final results
     $("#calcResultsButton").click(function()
     {
         let q1Para = $("#q1Results p");
@@ -150,7 +149,7 @@ $(document).ready(function()
         if(userAnswer1 === correctAnswer1)
         {
             numberCorrect++;
-            q1Para.html("Question 1: Correct! Your answer " + userAnswer1);
+            q1Para.html("Question 1: Correct!");
             q1Para.css("color", "green");
         }
         else
@@ -162,7 +161,7 @@ $(document).ready(function()
         if(userAnswer2 === correctAnswer2)
         {
             numberCorrect++;
-            q2Para.html("Question 2: Correct! Your answer " + userAnswer2);
+            q2Para.html("Question 2: Correct!");
             q2Para.css("color", "green");
         }
         else
@@ -174,7 +173,7 @@ $(document).ready(function()
         if(userAnswer3 === correctAnswer3)
         {
             numberCorrect++;
-            q3Para.html("Question 3: Correct! Your answer " + userAnswer3);
+            q3Para.html("Question 3: Correct!");
             q3Para.css("color", "green");
         }
         else
@@ -206,14 +205,16 @@ $(document).ready(function()
              q5Para.html("Question 5: Incorrect... The correct answer was greater than or equal to " + correctAnswer5 + " ;)");
         }
         
+        
         let scoreText = "Score: " + numberCorrect + "/5";
         $("#score h3").html(scoreText);
         
-        //Disable Calculate Results button
+        $("#thanks h3").html("Thank you for taking the quiz! If you would like to play again, please press the \"Try Again!\" button. Have a great day :)");
+        
+        //Disable Calculate Results button and Enable Try Again button
         $('#calcResultsButton').prop('disabled', true);
+        $('#navButton').prop('disabled', false);
     });
-    
-    //Method to load the results
 });
 
 

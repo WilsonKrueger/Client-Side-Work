@@ -16,17 +16,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <!--<link href="../styles/jquery-ui.css" rel="stylesheet" type="text/css"/>-->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     </head>
-    <body id="div_alternate">
+    <body id="final_body">
 
-        <div id="questionMainDiv">
-            <input type="hidden" value="1" id='navIndex'>
-            <!--<input type="button" value="Load Question 1" id="q1Button" />-->
-            <input type="button" value="Start Quiz" id="navButton" />
+        <div id="div_alternate">
+            
+            <div id="questionMainDiv">
+                <input type="hidden" value="1" id='navIndex'>
+
+                <h1>Quiz Game</h1>
+                <h3>This is a 5 question quiz to test you on Client-Side Web 
+                    Development and JavaScript.</h3><br>
+                <h3>Press the "Start Quiz" button to begin! Have fun :)</h3><br>
+
+                <input type="button" value="Start Quiz" id="navButton" />
+            </div>
+        
+        <footer>
+            <h3 class="progress_header">Quiz Progress</h3>
+            <div id="progressbar"><div class="progress-label">0%</div></div> 
+        </footer>
         </div>
         
-        <h3 class="progress_header">Quiz Progress</h3>
-        <div id="progressbar"><div class="progress-label">0%</div></div>        
-        
         <script src="../js/finaljavascript.js"></script>
+
     </body>
 </html>
