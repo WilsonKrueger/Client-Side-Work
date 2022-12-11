@@ -128,6 +128,7 @@ input[type=button] {
 }
 #final_body {
      background-image: url("https://png.pngitem.com/pimgs/s/31-315200_question-mark-png-computer-graphics-transparent-background-question.png");
+     width: 100%;
 }
 
 #div_main
@@ -151,6 +152,14 @@ input[type=button] {
     background-color: lightblue;
     padding-bottom: 225px;    /* height of footer */
 }
+#div_asmt_main
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+    padding: 10px;
+}
+
 #div_table
 {
     margin: 0 auto;
