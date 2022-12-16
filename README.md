@@ -16,6 +16,6 @@ a paragraph on the page.
 - **Assignment #4:** A web page that allows the user to build a sortable accordion list. The dialog box prompts the user to enter a title for an accordion (text box) 
 and the content (text area). It will then use the title and content to add an item at the end of the accordion list. There are two buttons - one to add an item and one
 to indicate when the user is done building the list. On the done event, the accordion widget animates. 
-- **Final Project:** This project utilizes many 
+- **Final Project:** This project's goal was to expand our knowledge in some area we learned during this course. I chose to expand my knowledge in jQuery UI and Javascript by making an 5 Question Quiz application. It utilizes many jQuery UI components not learned in class like a progressbar, datepicker, and scrollbar, along with multiple JavaScript components to make the application work properly. 
 
 
